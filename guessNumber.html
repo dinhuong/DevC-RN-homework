@@ -1,0 +1,29 @@
+<div id="message"></div>
+<input type="number" id="number">
+<button id="guessButton">Guess</button>
+<script>
+let randomNumber=Math.floor(Math.random() * 10) + 1;
+console.log(randomNumber);
+
+let button = document.getElementById('guessButton');
+
+let pastGuess=[];
+
+var i=0;
+
+button.addEventListener('click', function() {
+if (i<10){
+	i++;
+	let userGuess = parseInt(document.getElementById('number').value);
+  
+	if(userGuess===randomNumber) {
+  document.getElementById('message').innerHTML='Congratulations!! You guessed correctly.';
+  }
+  else if (userGuess<randomNumber) {
+  document.getElementById('message').innerHTML='Sorry your guess is too low. You have '+(10-i)+' guesses left';
+  }
+  else document.getElementById('message').innerHTML='Sorry your guess is too high. You have '+(10-i)+' guesses left';
+  
+}
+});
+</script>
