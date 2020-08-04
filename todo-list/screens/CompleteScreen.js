@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, FlatList } from 'react-native';
 
 export default function CompleteScreen() {
   return (
@@ -12,12 +12,3 @@ export default function CompleteScreen() {
 CompleteScreen.navigationOptions = {
   header: null
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    backgroundColor: '#fff',
-    justifyContent: 'center'
-  }
-});
